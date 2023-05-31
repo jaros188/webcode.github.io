@@ -1,0 +1,163 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+#nav {
+	display: flex;
+	background-color: black;
+	align-items: center;
+}
+
+.logo {
+	display: flex;
+	align-items: center;
+}
+
+.logo a img {
+	height: 30px;
+	padding-inline: 10px;
+}
+
+.search {
+	background: white;
+	display: inline-flex;
+	border: 1px solid black;
+	border-radius: 30px;
+	padding:10px;
+}
+
+.search-icon {
+	width: 20px;
+	height: 20px;
+	margin-right: 10px;
+	order: -1;
+}
+
+.search-field {
+	width: 300px;
+	border: 0;
+}
+
+.search-field:focus + .search-icon {
+  /* стили для иконки при фокусе поля */ 
+}
+
+.search-field:focus {
+	outline: none;
+}
+
+.nav-btn {
+	display: none;
+}
+
+.tasten ul {
+	display: flex;
+	list-style: none;
+	align-items: center;
+	width: 100%;
+	height: 50px;
+}
+
+.tasten ul li a {
+	display: flex;
+	font-size: 1.5em;
+	font-style: sans-serif;
+	align-items: center;
+	font-weight: bold;
+	text-decoration: none;
+	color: orange;
+	padding: 10px;
+	height: 18px;
+}
+
+.tasten ul li a:hover {
+	color: #c4fcff;
+}
+
+#main {
+	background: url('../../sourse/images/berg.jpg');
+	background-size: cover;
+	width: 100%;
+	height: 100vh;
+}
+
+.über-mich {
+	display: inline-block;
+	background: white;
+	padding:10px;
+	margin: 2px;
+	border: 15px solid;
+	border-image: url(../../sourse/images/border-image.webp) 30 / 15px / 0px stretch;
+}
+
+.band {
+	background: green;
+	height: 16px;
+}
+
+
+#footer {
+	display: flex;
+	background-color: black;
+	align-items: center;
+}
+
+.footer ul {
+	display: flex;
+	list-style: none;
+	width: 100%;
+	height: 50px;
+	line-height: 25px;
+}
+
+.footer ul li a {
+	display: block;
+	font-size: 1.5em;
+	font-style: sans-serif;
+	font-weight: bold;
+	text-decoration: none;
+	color: orange;
+	padding: 10px;
+}
+
+.footer ul li a:hover {
+	color: #c4fcff;
+}
+
+
+@media screen and (max-width: 1000px) {
+.nav-btn {
+	display: block;
+	cursor: pointer;
+	color: white;
+	background-color: black;
+	border: none;
+	font-size: 2em;
+	padding-inline:10px;
+	padding-bottom: 3px;
+}
+
+.tasten ul {
+	display: none;
+}
+
+.nav-btn:hover {
+	background-color: rgb(70, 70, 70);
+}
+
+.drop:hover .tasten ul {
+	display: block;
+	width: auto;
+	position: absolute;
+	right: 1px;
+}
+
+.drop:hover .tasten ul li a {
+	background: black;
+}
+
+#nav {
+	justify-content: space-between;
+}
+}
